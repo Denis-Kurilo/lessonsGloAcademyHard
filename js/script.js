@@ -1,23 +1,44 @@
 
 let num = 266219; 
-let arr = ('' + num).split('');
-let result = arr[0] * arr[1] * arr[2] * arr[3] * arr[4] * arr[5];
-let exponentiation = result ** 3;
+
+	num = ('' + num).split('');
+let reducer = (accumulator, currentValue) => accumulator * currentValue;
+let sum = num.reduce(reducer);
+
+let exponentiation = sum ** 3;
 let number = ('' + exponentiation).split('');
+number = number[0] + number[1];
+	
 
-	number = arr[0] * arr[1];
+console.log(sum);
+console.log(exponentiation);
+console.log(parseInt(number));
 
-	console.log(result);
-	console.log(exponentiation);
-	console.log(number);
+
+
+
+
+
+
 
 
 /*let num = 266219; 
 let arr = ('' + num).split('');
+const num = 266219; 
+const arr = ('' + num).split('');
+const reducer = (accumulator, currentValue) => accumulator * currentValue;
+console.log(arr.reduce(reducer));
 
-console.log(arr)
 
-for(i = 0; i < arr.length; i++) {
+
+
+/*for(i = 0; i < arr.length; i++) {
 
 }*/
 
+
+
+
+/*
+let number = ('' + exponentiation).split('');
+let result = arr.reduce(reducer);*/
