@@ -1,53 +1,25 @@
-//if-else
-let lang = prompt('Введите значение ru или en'),
-	daysOfTheWeekRu = ['Понедельник','Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота', 'Воскресенье'],
-	daysOfTheWeekEn = ['Monday','Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
+/*
+1) Создайте функцию, которая принимает 1 аргумент (название произвольное)
+— Если в качестве аргумента передана не строка - функция оповещает об этом пользователя
+— В полученной (как аргумент) строке функция должна убрать все пробелы в начале и в конце
+— Если строка более 30 знаков - то после 30го символа часть текста скрывается и вместо них появляются три точки (...)
 
-if(lang == 'ru'){
-	daysOfTheWeekRu.forEach((item) => {
-		console.log(item);
-	})
-}else if (lang == 'en'){
-	daysOfTheWeekEn.forEach((item) => {
-		console.log(item);
-	})
-} else {
-	console.log('Вы ввели не коректное значение');
+*/
+function inputOfaLine(data){
+
+	let sum = data.length;
+	console.log(sum)
+	if (typeof data == 'string'){
+		return data.trim();
+
+		// console.log(data.length);
+		
+	}else {
+		return 'Вы ввели число, введите строку';
+	}
+
 }
-
-
-//switch-case
-switch(lang){
-	case 'ru':
-		daysOfTheWeekRu.forEach((item) => {
-			console.log(item);
-		});
-	break;
-	case 'en':
-		daysOfTheWeekEn.forEach((item) => {
-			console.log(item);
-		});
-	break;
-	default: 
-		console.log('Вы ввели не коректное значение');
-}
-
-
-//[[],[]]
-let daysOfTheWeekRu = [['ru'],['Понедельник','Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота', 'Воскресенье']],
-	daysOfTheWeekEn = [['en'],['Monday','Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']],
-	question = prompt('Введите значение ru или en');
-let language= (question == 'ru') ? daysOfTheWeekRu[1] : (question == 'en') ? daysOfTheWeekEn[1] : "Введите ru или en";
-language.forEach(function(item){
-	console.log(item);
-});
-
-
-
-let namePerson = prompt('Введите имя!');
-let name = (namePerson == 'Артем') ? "директор" : (namePerson == 'Максим') ? "преподаватель" : "студент";
-console.log(name);
-
+console.log(inputOfaLine('   gdfgsdjgsjdlgjldfjfsdhaslfhakfhL;JFHLJKAsgflakjsgdflaafdfghfgfjksdfksjgdfg1  '));
 
 
 
