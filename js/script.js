@@ -6,6 +6,7 @@
 через многомерный массив без ифов и switch.
 */
 
+//if-else
 /*let lang = prompt('Введите значение ru или en'),
 	daysOfTheWeekRu = ['Понедельник','Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота', 'Воскресенье'],
 	daysOfTheWeekEn = ['Monday','Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];*/
@@ -23,7 +24,7 @@
 }*/
 
 
-
+//switch-case
 /*switch(lang){
 	case 'ru':
 		daysOfTheWeekRu.forEach((item) => {
@@ -40,18 +41,15 @@
 }*/
 
 
-
-
-
+//[[],[]]
 /*let daysOfTheWeekRu = [['ru'],['Понедельник','Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота', 'Воскресенье']],
 	daysOfTheWeekEn = [['en'],['Monday','Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']],
 	question = prompt('Введите значение ru или en');
+let language= (question == 'ru') ? daysOfTheWeekRu[1] : (question == 'en') ? daysOfTheWeekEn[1] : "Введите ru или en";
+language.forEach(function(item){
+	console.log(item);
+});*/
 
-	question.daysOfTheWeekRu == true;
-	question.daysOfTheWeekEn == false;
-
-
-	console.log(question);*/
 
 
 let namePerson = prompt('Введите имя!');
