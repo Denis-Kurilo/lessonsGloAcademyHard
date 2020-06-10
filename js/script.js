@@ -1,13 +1,13 @@
 function inputOfaLine(data){
-	if (typeof data == 'string' && data.length >= 30){
-		if(data.length >= 30){
-			return data.substr(0, 30).trim() + '...';
-		}
-	}else {
-		return 'Вы ввели число, введите строку';
+	if (typeof data == 'string' && data.length < 30){
+		console.log(data.trim());
+	}else if( data.length > 30) {
+		console.log(data.slice(0, 30).trim() + '...');
+	}else{
+		console.log('Вы ввели число, введите строку');
 	}
 }
-console.log(inputOfaLine('   gdfgsdjgsjdlgjldfjfsdhaslfhakfhL;JFHLJKAsgflakjsgdflaafdfghfgfjksdfksjgdfg1  '));
+inputOfaLine('   sdhfsldhgsdhgksjldhfklsdhfklsjhdfkjls   ');
 
 
 
