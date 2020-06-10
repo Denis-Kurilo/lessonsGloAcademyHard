@@ -17,7 +17,7 @@ if(lang == 'ru'){
 
 
 //switch-case
-switch(lang){
+/*switch(lang){
 	case 'ru':
 		daysOfTheWeekRu.forEach((item) => {
 			console.log(item);
@@ -30,22 +30,22 @@ switch(lang){
 	break;
 	default: 
 		console.log('Вы ввели не коректное значение');
-}
+}*/
 
 
 //[[],[]]
-let daysOfTheWeekRu = [['ru'],['Понедельник','Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота', 'Воскресенье']],
+/*let daysOfTheWeekRu = [['ru'],['Понедельник','Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота', 'Воскресенье']],
 	daysOfTheWeekEn = [['en'],['Monday','Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']],
 	question = prompt('Введите значение ru или en');
 let language= (question == 'ru') ? daysOfTheWeekRu[1] : (question == 'en') ? daysOfTheWeekEn[1] : "Введите ru или en";
 language.forEach(function(item){
 	console.log(item);
-});
+});*/
 
 
 
 let namePerson = prompt('Введите имя!');
-let name = (namePerson == 'Артем') ? "директор" : (namePerson == 'Максим') ? "преподаватель" : "студент";
+let name = (namePerson == 'Артем' || namePerson == 'артем') ? "директор" : (namePerson == 'Максим' || namePerson == 'максим') ? "преподаватель" : "студент";
 console.log(name);
 
 
