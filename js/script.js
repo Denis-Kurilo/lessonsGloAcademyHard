@@ -6,7 +6,6 @@ for(let i = 0; i < arr.length; i++) {
 	}
 }*/
 
-let counter = 1;
 for (let i = 1; i <= 100; i++){
 	console.log(`${i} Делители этого числа: 1 и ${i}`);
 }
