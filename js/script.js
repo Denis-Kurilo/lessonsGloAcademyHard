@@ -1,49 +1,48 @@
-const game = function(){
-    let min = 0,
-        max = 100,
-        count = 10,
-        rundomNum;
+let date = document.querySelector('.date');
+function showTime1() {
+  const monthsArr = ["Января", "Февраля", "Марта", "Апреля", "Мая", "Июня", 
+  "Июля", "Августа", "Сентября", "Октября", "Ноября", "Декабря"];
 
-    rundomNum = Math.floor(Math.random() * (max - min)) + 1;
-    // console.log(rundomNum);
+  const daysArr = ["Воскресенье", "Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота"];
 
-    function youWantToPlay() {
-      if(confirm('Хотели бы сыграть еще?')){
-          return window.location.reload();  
-      }else{
-        alert('Завершить игру');
-      }
-    }
-    return function guessNum() {
-        let num = +prompt('Угадайте число от 1 до 100');
+  const dateObj = new Date();
 
-        if(count == 1) {
-        if(alert('Попытки закончились!!!')){
-            window.location.reload(); 
-        }
-            return youWantToPlay();
-         } 
-         count--;
+  let year = dateObj.getFullYear(),
+     month = dateObj.getMonth(),
+     numDay = dateObj.getDate(),
+     day = dateObj.getDay(),
+     hour = dateObj.getHours(),
+     minute = dateObj.getMinutes(),
+     second = dateObj.getSeconds(),
+     hours;
 
-         if (num == rundomNum) {
-            alert('Поздравляю, Вы угадали!!!');
-            return youWantToPlay();
-         } else if (num >= rundomNum && num != '') {
-            alert('Загаданное число меньше, осталось попыток' + count );
-            guessNum();
-         }else if (num <= rundomNum && num != '') {
-            alert(`Загаданное число больше, осталось попыток ${count}`);
-            guessNum();
-         } else if (isNaN(parseFloat(num) && isFinite(num))) {
-            alert('Введите число');
-            guessNum();
-         }else{
-           alert('Завершить игру')
-         }
-        }
-        guessNum();
-         console.dir(guessNum())
-    }
-let startGame = game();
-startGame();
-// console.dir(startGame)
+  if (minute < 10) minute = "0" + minute;
+
+  if (second < 10) second = "0" + second;
+
+  if(hour === 1){
+    hours = 'час';
+  }else if(hour > 1 && hour <= 4 || hour >= 22 && hour <= 24){
+    hours = 'часа';
+  }else if(hour >= 5 && hour <= 21){
+    hours = 'часов';
+  }
+date.innerHTML = out = `Сегодня ${daysArr[day]}, ${numDay} ${monthsArr[month]} ${year} год, ${hour} ${hours} : ${minute} минут : ${second} секунд`;
+}
+setInterval(showTime1, 1000);
+
+
+function showTime2() {
+    let tm = new Date();
+    let resTxt = '';
+
+    resTxt += `${tm.getDate()}. ${tm.getMonth() + 1}. ${tm.getFullYear()} - `;
+
+    resTxt += `${tm.getHours()} : ${tm.getMinutes()} : ${tm.getSeconds()}`; 
+
+    resTxt = resTxt.replace(/\b(\d{1})\b/g, '0$1');
+
+    document.write(resTxt);
+}
+showTime2();
+
