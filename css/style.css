@@ -1,0 +1,43 @@
+body{
+	position: relative;
+}
+.imgAirplane{
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+.imgAirplane img{
+	width: 500px;	
+	height: 300px;	
+	position: relative;
+}
+
+
+.btn{
+	top: 500px;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	width: 600px;
+	height: 200px;
+	position: absolute;
+	display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+
+.btnPlay, .reset{
+	font-size: 20px;
+}
+.parachutel{
+	position: absolute;
+	top: 140px;
+  left: 125px;
+  display: none;
+}
+.parachutel img {
+	width: 100px;
+	height: 150px;
+
+}
